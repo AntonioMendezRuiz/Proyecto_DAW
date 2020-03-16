@@ -1,0 +1,115 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans';
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    background: #ebc7c5;
+}
+header{
+    background-color: #ed9d98;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+header img{
+   height: 100px;
+   widows: 100px;
+}
+h1{
+    color: red;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    padding-left: 10%;
+    text-align: left;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: max-content;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+}
+#busqueda{
+    width: 45%;
+    height: 2rem;
+    margin-top: 10%;
+}
+.consulta{
+    text-align: center;
+}
+.wrapper{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.btn {
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    width: 6rem;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 2rem;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    display: inline-block;
+}
+.blue {
+    color: red;
+    border: 2px red solid;
+  }
+  
+.blue:hover {
+    background-color: #ed9d98;
+    color: red;
+}
+.respuestas{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 10%;
+    margin-right: 10%;
+    /* text-align: center; */
+}
+
+#stack{
+    width: 80%;
+    /* text-align: center; */
+}
+#web{
+    width: 80%; 
+    text-align: center;
+   
+}
+footer{
+    display: grid;
+    width: 100%;
+    grid-auto-rows: max-content;
+    grid-template-columns: 50% 50%;
+    background-color: #ed9d98;
+    border-top: red double 3px;
+    margin: 0%;
+    margin: 0px;
+    bottom:0px;
+}
+h2{
+    font-family: 'Pacifico', cursive;
+    color: red;
+}
+#desarrolladores{
+    text-align: center;
+    grid-column: span 2;
+    margin-top: 5rem;
+}
+
+.informacion, .contacto{
+    margin-top: 5rem;
+    text-align: center;
+}
+
