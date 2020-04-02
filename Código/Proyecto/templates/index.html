@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CodePass</title>
-    <link rel="stylesheet" href="../CSS/estilos.css">
-    <script src="../JS/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <style>
         @import 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans';
@@ -179,18 +177,12 @@
             </div>
         </div>
     </div>
-    <footer>
+    
+    {% block content %}
 
-        <div class="informacion">
-            <h2>Información</h2>
-            <p>Web creada para el proyecto de fin de grado de Antonio Méndez Ruiz.</p>
-        </div>
+        {% include 'footer.html' %}
 
-        <div class="contacto">
-            <h2>Contacto</h2>
-            <p>E-mail: mendezruiz20@gmail.com</p>
-        </div>
-    </footer>
+    {% endblock %}
 </body>
 
 </html>
