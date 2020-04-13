@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CodePass</title>
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <style>
         @import 'https://fonts.googleapis.com/css?family=Oswald|Open+Sans';
         @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
@@ -145,27 +143,33 @@
 
 <body>
 
-    <div class="container">
-        {% block header %}
+    {% block header %}
 
-            {% include 'header.html' %}
+        {% include 'header.html' %}
 
-        {% endblock %}
+    {% endblock %}
 
-        <form class="consulta" method="POST" action="/consulta/">
-            {% csrf_token %}
-            <input type="text" name ="busca" id="busqueda" placeholder=" Introduzca su búsqueda"><br>
-           
-            <button type="submit" class="btn blue" >Buscar</button>
-            <button class="btn blue" onclick="borrar()">Borrar</button>
-        </form>
+    <div class="respuestas" id="resultado">
+        <div id="stack">
+            <h2>Pregunta</h2>
+            <div id="preguntaStack">{{ bsobj1 }}</div>
+            <h2>Respuesta</h2>
+            <div id="respuestaStack"></div>
+        </div>
+        <div id="web">
+            <h2>Pregunta</h2>
+            <div id="preguntaWeb"></div>
+            <h2>Respuesta</h2>
+            <div id="respuestaWeb"></div>
+        </div>
     </div>
-    
+
     {% block footer %}
 
         {% include 'footer.html' %}
 
     {% endblock %}
+
 </body>
 
 </html>
