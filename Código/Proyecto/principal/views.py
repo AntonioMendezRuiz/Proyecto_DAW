@@ -1,30 +1,30 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+import requests
 
-@csrf_exempt
+def consulta(request):
+    busqueda = request.GET.get('busca')
+    quitaSpace = busqueda.replace(' ', '+')
+    busquedaFinal = "https://google.com/search?q="+quitaSpace
+    req = requests.get(busquedaFinal)
+    html = BeautifulSoup(req.text, "html.parser")
+    #htmlStack = urlopen(busquedaFinal)
+    #bsobj = BeautifulSoup(htmlStack.read())
+ 
 
-def scrapping(request):
-    if request.method == 'POST':
-        busqueda = request.POST.get('busca')
-        html = urlopen("https://google.com/" + busqueda)
-        bsobj = BeautifulSoup(html.read())
-        bsobj1 = bsobj.title
-        template = loader.get_template("respuestas.html")
-
-        return HttpResponse(template.render(bsobj1, request))
-
-
-
-class RespuestasView(TemplateView):
-    template_name = 'respuestas.html'
+    values = {'prueba': html, 'busca': busquedaFinal}
+    
+    
+    return render(request, "respuestas.html", values)
 
 
-class PrincipalView(TemplateView):
-    template_name = 'index.html'
+def PrincipalView(request):
+    return render(request, "index.html")
 
         
         

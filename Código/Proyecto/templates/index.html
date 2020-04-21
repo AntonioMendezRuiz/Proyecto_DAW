@@ -152,15 +152,15 @@
 
         {% endblock %}
 
-        <form class="consulta" method="POST" action="/consulta/">
-            {% csrf_token %}
+        <form class="consulta" method="GET" action="/consulta/">
+            
             <input type="text" name ="busca" id="busqueda" placeholder=" Introduzca su búsqueda"><br>
            
             <button type="submit" class="btn blue" >Buscar</button>
             <button class="btn blue" onclick="borrar()">Borrar</button>
         </form>
     </div>
-    
+    <p>{{busca}}</p>
     {% block footer %}
 
         {% include 'footer.html' %}
