@@ -14,7 +14,7 @@ def consulta(request):
 
     #Asignamos las búsquedas para las diferentes webs 
     busquedaStack = "http://www.google.com.co/search?hl=es&q="+quitaSpace+"+stackoverflow&btnG=Buscar&meta="
-    busquedaWebProgramador = "http://www.google.com.co/search?hl=es&q="+quitaSpace+"+lawebdelprogramador&btnG=Buscar&meta="
+    busquedaWebProgramador = "http://www.google.com.co/search?hl=es&q="+quitaSpace+"+la+web+del+programador&btnG=Buscar&meta="
     
     #Hacemos las peticiones
     reqStack = requests.get(busquedaStack)
@@ -35,6 +35,7 @@ def consulta(request):
     #Una vez tenemos las urls vamos a las webs en búsqueda de la información
     urlStack = stack[0].get_attribute_list('href')[0][7:]
     urlWeb = web[0].get_attribute_list('href')[0][7:]
+    urlWeb = urlWeb.split('&')[0]
 
     #Repetimos proceso para acceder a la información desde la web
     reqStackFinal = requests.get(urlStack)
@@ -45,9 +46,33 @@ def consulta(request):
     #Extraemos información de StackOverFlow
     preguntaStack = htmlStackFinal.find_all('div', class_='post-text')[0]
     respuestaStack = htmlStackFinal.find_all('div', class_='post-text')[1]
+    preguntaWeb = htmlWebFinal.find_all('div', class_='ce')[0]
+    #Aquí he tenido que buscar etiquetas dentro de etiquetas debido a la estructura del web
+    respuestaWeb = htmlWebFinal.find_all('div', class_='codeFormat')[0]
+    respuestaWeb = respuestaWeb.find('div')
+    respuestaWeb = respuestaWeb.find('div').nextSibling
+    
+    respuestaWeb = respuestaWeb.find_all('pre')
+    respuestaWebFinal = []
+    for element in respuestaWeb:
+        respuestaWebFinal.append(element.get_text())
+        respuestaWebFinal.append('<br>')
+
+    #Añadimos la etiqueta code a la la respuestaWeb para el formato
+    respuestaWebFinal.insert(0, '<code>')
+    respuestaWebFinal.insert(0, '<pre>')
+    respuestaWebFinal.append('</code>')
+    respuestaWebFinal.append('</pre>')
+
+    #Tenemos un array con cada una de las etiquetas así que lo pasamos a string
+    preguntaStack = ''.join(str(e) for e in preguntaStack)
+    respuestaStack = ''.join(str(e) for e in respuestaStack)
+    preguntaWeb = ''.join(str(e) for e in preguntaWeb)
+    respuestaWebFinal = ''.join(str(e) for e in respuestaWebFinal)
+
 
     #Asiganamos los valores que queremos pasar al front
-    values = {'preguntaStack': preguntaStack, 'respuestaStack': respuestaStack, 'preguntaWeb': urlWeb, 'respuestaWeb': 'WIP'}
+    values = {'preguntaStack': preguntaStack, 'respuestaStack': respuestaStack, 'preguntaWeb': preguntaWeb, 'respuestaWeb': respuestaWebFinal}
     
     #Finalmente enviamos la información al front
     return render(request, "respuestas.html", values)

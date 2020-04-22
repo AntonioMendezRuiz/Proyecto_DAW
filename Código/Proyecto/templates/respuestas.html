@@ -152,15 +152,15 @@
     <div class="respuestas" id="resultado">
         <div id="stack">
             <h2>Pregunta</h2>
-            <div id="preguntaStack">{{ preguntaStack }}</div>
+            <div id="preguntaStack">{{ preguntaStack|safe }}</div>
             <h2>Respuesta</h2>
-            <div id="respuestaStack">{{ respuestaStack }}</div>
+            <div id="respuestaStack">{{ respuestaStack|safe }}</div>
         </div>
         <div id="web">
             <h2>Pregunta</h2>
-            <div id="preguntaWeb">{{ preguntaWeb }}</div>
+            <div id="preguntaWeb">{{ preguntaWeb|safe }}</div>
             <h2>Respuesta</h2>
-            <div id="respuestaWeb">{{ respuestaWeb }}</div>
+            <div id="respuestaWeb">{{ respuestaWeb|safe }}</div>
         </div>
     </div>
 
