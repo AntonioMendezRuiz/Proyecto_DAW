@@ -52,6 +52,7 @@ def consulta(request):
     respuestaWeb = respuestaWeb.find('div')
     respuestaWeb = respuestaWeb.find('div').nextSibling
     
+    #Los códigos de la web del programador precisa de estos cambios para el formateo del código
     respuestaWeb = respuestaWeb.find_all('pre')
     respuestaWebFinal = []
     for element in respuestaWeb:
@@ -64,12 +65,17 @@ def consulta(request):
     respuestaWebFinal.append('</code>')
     respuestaWebFinal.append('</pre>')
 
-    #Tenemos un array con cada una de las etiquetas así que lo pasamos a string
+    #Tenemos una lista con cada una de las etiquetas así que lo pasamos a string
     preguntaStack = ''.join(str(e) for e in preguntaStack)
     respuestaStack = ''.join(str(e) for e in respuestaStack)
     preguntaWeb = ''.join(str(e) for e in preguntaWeb)
     respuestaWebFinal = ''.join(str(e) for e in respuestaWebFinal)
 
+    #Introducimos la clase prettyfy para los códigos
+    preguntaStack = preguntaStack.replace('<code>', '<code class="prettyprint">')
+    respuestaStack = respuestaStack.replace('<code>', '<code class="prettyprint">')
+    preguntaWeb = preguntaWeb.replace('<code>', '<code class="prettyprint">')
+    respuestaWebFinal = respuestaWebFinal.replace('<code>', '<code class="prettyprint">')
 
     #Asiganamos los valores que queremos pasar al front
     values = {'preguntaStack': preguntaStack, 'respuestaStack': respuestaStack, 'preguntaWeb': preguntaWeb, 'respuestaWeb': respuestaWebFinal}

@@ -10,6 +10,8 @@ El objetivo principal del software es crear un comparador de busquedas sobre pro
 a la hora de realizar sus consultas. La intención es que dichas busquedas aparezcan de una forma ordenada y clara en pantalla para que el usuario, de un solo vistazo, pueda ver cual se ajusta más a su duda y por tanto resolverla.
 
 ## Arquitectura.
+Para la arquitetura del proyecto usaremos djago con la ayuda de algunas librerias de javascript como "Prettyfy" el cual sirve para el formateo de códigos en la 
+web.
 
 ### Módulos.
 En esta sección se describen los módulos que van a constituir el software a desarrollar. Debido a la naturaleza del proyecto, la estructura de dichos módulos puede cambiar, por lo que esto es un texto vivo. Además de su arquitectura, también debería especificarse el lenguage de programación en el que están siendo desarrollados dichos módulos. 
