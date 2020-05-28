@@ -11,8 +11,17 @@
 - Bajo ciertas condiciones las etiquetas "code" se salen del tamaño predefinido en el grid.
 - Determinadas búsquedas no se realizan correctamente y da un error "out of index" de alguna list.
 
-## v0.0.2
-- WIP
+## v0.0.5
+- Mejora de la interaz.
+- Formatea mejor algunos tipos de código.
+
+## v0.1.0
+- Bugs:
+  · Cuando la búsqueda no existe ya no desencadena un error.
+  · Si el texto a que devuelve el back es demasiado extenso no da error.
+  · Controla cualquier tipo de error para que el usuario no lo vea
+  · Error visual que hacia que el h1 se viera mal solucionado.
+
 
 ## Roadmap
 
