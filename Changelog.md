@@ -17,10 +17,10 @@
 
 ## v0.1.0
 - Bugs:
-  · Cuando la búsqueda no existe ya no desencadena un error.
-  · Si el texto a que devuelve el back es demasiado extenso no da error.
-  · Controla cualquier tipo de error para que el usuario no lo vea
-  · Error visual que hacia que el h1 se viera mal solucionado.
+  · Cuando la búsqueda no existe ya no desencadena un error.  
+  · Si el texto a que devuelve el back es demasiado extenso no da error.  
+  · Controla cualquier tipo de error para que el usuario no lo vea.  
+  · Error visual que hacia que el h1 se viera mal solucionado.  
 
 
 ## Roadmap
