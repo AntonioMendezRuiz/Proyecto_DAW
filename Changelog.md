@@ -16,12 +16,15 @@
 - Formatea mejor algunos tipos de código.
 
 ## v0.1.0
-- Bugs:
+- Bugs solucionados:
   · Cuando la búsqueda no existe ya no desencadena un error.  
   · Si el texto a que devuelve el back es demasiado extenso no da error.  
   · Controla cualquier tipo de error para que el usuario no lo vea.  
   · Error visual que hacia que el h1 se viera mal solucionado.  
 
+## v0.1.5
+- Cambios en el front: Colores e imágenes.
+- Control del algunas excepciones con respecto al tamaño del texto recibido.
 
 ## Roadmap
 
@@ -30,7 +33,4 @@
 - Enlaces directos con las webs proveedoras de información en cada una de las consultas.
 - Tratamiento de la información (posiblemente alguna gráfica sobre las búsquedas).
 - Bot de twitter que haga una tweetlist de las búsquedas que se vayan haciendo en la web.
-- Ponerlo bonito.
-.
-.
-.
+
