@@ -85,7 +85,7 @@ def consulta(request):
         return render(request, "respuestas.html", values)
     except:
         #De suceder algún error o no encontrarse la respuesta deseada, se mostrará este mensaje
-        values = {'preguntaStack': 'No existe esta consulta', 'respuestaStack': '', 'preguntaWeb': 'No existe esta consulta', 'respuestaWeb': ''}
+        values = {'preguntaStack': 'La consulta no es lo suficientemente precisa o no existe.', 'respuestaStack': '', 'preguntaWeb': 'La consulta no es lo suficientemente precisa o no existe.', 'respuestaWeb': ''}
         return render(request, "respuestas.html", values)
 
 

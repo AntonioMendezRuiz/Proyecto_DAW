@@ -12,11 +12,11 @@
         body {
             padding: 0;
             margin: 0;
-            background: lightgreen;
+            background:#7b869c;
         }
 
         header {
-            background-color: #0c401a;
+            background-color: #2c374a;
             padding: 0;
             margin: 0;
             height: 100%;
@@ -32,7 +32,7 @@
             text-decoration: none !important;
         }
         h1 {
-            color: lightgreen;
+            color: #7b869c !important;
             font-weight: bold;
             font-family: 'Pacifico', cursive;
             font-size: 3rem;
@@ -82,13 +82,13 @@
         }
 
         .blue {
-            color: #0c401a;
-            border: 2px #0c401a solid;
+            color: #2c374a;
+            border: 2px #2c374a solid;
         }
 
         .blue:hover {
-            background-color: #0c401a;
-            color: lightgreen;
+            background-color: #2c374a;
+            color: #7b869c;
         }
 
         .respuestas {
@@ -115,7 +115,7 @@
             width: 100%;
             grid-auto-rows: max-content;
             grid-template-columns: 50% 50%;
-            background-color: #0c401a;
+            background-color: #2c374a;
             border-top: white 3px;
             margin: 0%;
             margin: 0px;
@@ -123,22 +123,26 @@
         }
 
         h2 {
-            color: #0c401a;
+            color: #2c374a;
         }
 
         #desarrolladores {
             text-align: center;
             grid-column: span 2;
             margin-top: 5rem;
-            color: lightgreen;
+            color: #7b869c;
         }
 
         .informacion,
         .contacto {
             margin-top: 5rem;
             text-align: center;
-            color: lightgreen;
+            color: #7b869c;
             margin-bottom: 5rem;
+        }
+        .logos{
+            height: 4rem;
+            width: 7rem;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
@@ -159,12 +163,14 @@
 
     <div class="respuestas" id="resultado">
         <div id="stack">
+            <img class = 'logos' src="https://www.muycomputerpro.com/wp-content/uploads/2019/05/stack-overflow-brecha-seguridad.jpg">
             <h2>Pregunta</h2>
             <div id="preguntaStack">{{ preguntaStack|safe }}</div>
             <h2>Respuesta</h2>
             <div id="respuestaStack">{{ respuestaStack|safe }}</div>
         </div>
         <div id="web">
+            <img class = "logos" src="https://www.lawebdelprogramador.com/usr/43000/43585/profileImage_origin.jpg?1412661345" alt="">
             <h2>Pregunta</h2>
             <div id="preguntaWeb">{{ preguntaWeb|safe }}</div>
             <h2>Respuesta</h2>
