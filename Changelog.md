@@ -26,6 +26,11 @@
 - Cambios en el front: Colores e imágenes.
 - Control del algunas excepciones con respecto al tamaño del texto recibido.
 
+## v0.2.0
+- Solución por la cual cuando existia una consulta que no existiera en alguna de las webs daba error en ambas, solucionado.
+- Cambios en el layout.
+- Mejoramos la limpiza y simplicidad del código.
+
 ## Roadmap
 
 - Establecer Favicon y logo de la web.
