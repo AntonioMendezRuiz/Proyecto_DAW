@@ -85,12 +85,13 @@ def consulta(request):
         reqWebFinal = requests.get(urlWeb)
         htmlWebFinal = BeautifulSoup(reqWebFinal.text, "html.parser")
 
-        #Extraemos información de StackOverFlow
-        preguntaWeb = htmlWebFinal.find_all('div', class_='ce')[0]
+        #Extraemos información de la web
+        #preguntaWeb = htmlWebFinal.find_all('div', class_='ce')[0]
+        preguntaWeb = htmlWebFinal.find_all('div', class_='list_description')[0]
         #Aquí he tenido que buscar etiquetas dentro de etiquetas debido a la estructura del web
-        respuestaWeb = htmlWebFinal.find_all('div', class_='codeFormat')[0]
-        respuestaWeb = respuestaWeb.find('div')
-        respuestaWeb = respuestaWeb.find('div').nextSibling
+        respuestaWebFinal = htmlWebFinal.find_all('div', class_='list_description')[1]
+        #respuestaWeb = respuestaWeb.find('div')
+        #respuestaWeb = respuestaWeb.find('div').nextSibling
         
         #Los códigos de la web del programador precisa de estos cambios para el formateo del código
         respuestaWeb = respuestaWeb.find_all('pre')
@@ -105,18 +106,81 @@ def consulta(request):
         respuestaWebFinal.append('</code>')
         respuestaWebFinal.append('</pre>')
 
+
         #Tenemos una lista con cada una de las etiquetas así que lo pasamos a string
         preguntaWeb = ''.join(str(e) for e in preguntaWeb)
         respuestaWebFinal = ''.join(str(e) for e in respuestaWebFinal)
 
         #Introducimos la clase prettyfy para los códigos
         preguntaWeb = preguntaWeb.replace('<code>', '<code class="prettyprint">')
-        respuestaWebFinal = respuestaWebFinal.replace('<code>', '<code class="prettyprint">') 
+        respuestaWebFinal = respuestaWebFinal.replace('<code>', '<code class="prettyprint">')
+        preguntaWeb = preguntaWeb.replace('<pre>', '<pre class="prettyprint">')
+        respuestaWebFinal = respuestaWebFinal.replace('<pre>', '<pre class="prettyprint">')  
     except:
 
-        #De suceder algún error o no encontrarse la respuesta deseada, se mostrará este mensaje
-        preguntaWeb = 'La consulta no es lo suficientemente precisa o no existe.'
-        respuestaWebFinal = ''
+        try:
+            #Preparamos la query para introducirla en el buscador
+            busqueda = request.GET.get('busca')
+            quitaSpace = busqueda.replace(' ', '+')
+
+            #Asignamos las búsquedas para las diferentes webs 
+            busquedaWebProgramador = "http://www.google.com.co/search?hl=es&q="+quitaSpace+"+la+web+del+programador&btnG=Buscar&meta="
+            
+            #Hacemos las peticiones
+            reqWeb = requests.get(busquedaWebProgramador)
+
+            #Extrae el html de cada uno
+            htmlWeb = BeautifulSoup(reqWeb.text, "html.parser")
+
+            #Entramos en google en busca de las urls
+            #LaWebDelProgramador
+            bsobj1 = htmlWeb.find_all('div', class_= 'kCrYT')
+            web = bsobj1[0].find_all('a', href=True)
+
+            #Una vez tenemos las urls vamos a las webs en búsqueda de la información
+            urlWeb = web[0].get_attribute_list('href')[0][7:]
+            urlWeb = urlWeb.split('&')[0]
+
+            #Repetimos proceso para acceder a la información desde la web
+            reqWebFinal = requests.get(urlWeb)
+            htmlWebFinal = BeautifulSoup(reqWebFinal.text, "html.parser")
+
+            #Extraemos información de la web
+            preguntaWeb = htmlWebFinal.find_all('div', class_='ce')[0]
+            #preguntaWeb = htmlWebFinal.find_all('div', class_='list_description')[0]
+            #Aquí he tenido que buscar etiquetas dentro de etiquetas debido a la estructura del web
+            respuestaWeb = htmlWebFinal.find_all('div', class_='codeFormat')[0]
+            respuestaWeb = respuestaWeb.find('div')
+            respuestaWeb = respuestaWeb.find('div').nextSibling
+            
+            #Los códigos de la web del programador precisa de estos cambios para el formateo del código
+            respuestaWeb = respuestaWeb.find_all('pre')
+            respuestaWebFinal = []
+            for element in respuestaWeb:
+                respuestaWebFinal.append(element.get_text())
+                respuestaWebFinal.append('<br>')
+
+            #Añadimos la etiqueta code a la la respuestaWeb para el formato
+            respuestaWebFinal.insert(0, '<code>')
+            respuestaWebFinal.insert(0, '<pre>')
+            respuestaWebFinal.append('</code>')
+            respuestaWebFinal.append('</pre>')
+
+
+            #Tenemos una lista con cada una de las etiquetas así que lo pasamos a string
+            preguntaWeb = ''.join(str(e) for e in preguntaWeb)
+            respuestaWebFinal = ''.join(str(e) for e in respuestaWebFinal)
+
+            #Introducimos la clase prettyfy para los códigos
+            preguntaWeb = preguntaWeb.replace('<code>', '<code class="prettyprint">')
+            respuestaWebFinal = respuestaWebFinal.replace('<code>', '<code class="prettyprint">')
+            preguntaWeb = preguntaWeb.replace('<pre>', '<pre class="prettyprint">')
+            respuestaWebFinal = respuestaWebFinal.replace('<pre>', '<pre class="prettyprint">')  
+        except:
+
+            #De suceder algún error o no encontrarse la respuesta deseada, se mostrará este mensaje
+            preguntaWeb = 'La consulta no es lo suficientemente precisa o no existe.'
+            respuestaWebFinal = ''
 
     #Asiganamos los valores que queremos pasar al front
     values = {'preguntaStack': preguntaStack, 'respuestaStack': respuestaStack, 'preguntaWeb': preguntaWeb, 'respuestaWeb': respuestaWebFinal}
