@@ -195,11 +195,8 @@ A parte de los métodos convencionales de ayuda tales como StackOverFlow, GitHub
 
 He adjuntado una carpeta al proyecto llamada "Bibliografía" la cual recopila los libros que me han servido para la realización del proyecto. Son los siguentes 
 
-- ## **Aidas Bendoraitis, Jake Kronika - Django 3 Web Development Cookbook_ Actionable solutions to common problems in Python web development-Packt Publishing (2020**
-
-- ## **Daniel Roy Greenfield, Audrey Roy Greenfield - Django Crash Course (2020)**
-
-- ## **La guía definitiva de Django**
-
-- ## **Ryan Mitchell - Web Scraping with Python_ Collecting Data from the Modern Web-O'Reilly Media (2015)**
+- *Aidas Bendoraitis, Jake Kronika - Django 3 Web Development Cookbook_ Actionable solutions to common problems in Python web development-Packt Publishing (2020*
+- *Daniel Roy Greenfield, Audrey Roy Greenfield - Django Crash Course (2020)*
+- *La guía definitiva de Django*
+- *Ryan Mitchell - Web Scraping with Python_ Collecting Data from the Modern Web-O'Reilly Media (2015)*
 
