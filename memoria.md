@@ -132,7 +132,31 @@ El siguiente paso que tomamos es la de formatear el código que nos puede traer 
 
 Y por ultimo pasamos la respuesta del servidor al front. En caso de que no exisitiese dicha respuesta por parte de alguna de las webs, se mostraria un mensaje comunicandole al usuario que no existe dicha consulta.
 
+Parte Importante del desarrollo son las **Templates**. Es una carpeta creada por el desarrollador dentro de Django que te permite establecer plantillas para modularizar el código HTML de la web.
 
+![templates](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/templates.png)
+
+Estas son las diferentes templates que he creado para el proyecto.
+
+**Index**:
+
+![index](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/index.png)
+
+**Respuestas**:
+
+![respuestas](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/respuestas.png)
+
+**Header**:
+
+![header](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/header.png)
+
+**Footer**:
+
+![footer](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/footer.png)
+
+**Form**:
+
+![form](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/form.png)
 
 ## 5. Problemas encontrados
 
