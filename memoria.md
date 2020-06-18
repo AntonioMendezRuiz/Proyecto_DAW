@@ -6,9 +6,7 @@ Tutor: Paco Ávila
 
 Curso: 2019/20
 
-
-
-- Índice
+## Índice
 
 1. Descripción e introducción
 2. Objetivos
