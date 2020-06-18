@@ -34,11 +34,11 @@ Para la arquitectura del proyecto usaremos Django con la ayuda de algunas librer
 
 En esta sección se describen los módulos que van a constituir el software a desarrollar. Debido a la naturaleza del proyecto, la estructura de dichos módulos puede cambiar, por lo que esto es un texto vivo. Además de su arquitectura, también debería especificarse el lenguaje de programación en el que están siendo desarrollados dichos módulos.
 
-- <u>Front-End</u>: El front se basará estrictamente en HTML y CSS a través de la utilización de plantillas que ofrece Django. Dichas plantillas se modularizarán de forma que cada componente (Véase el footer, header o el body) sean independientes y se puedan usar en cada una de las páginas de la web. Es posible la implementación de JavaScript.
+- **<u>Front-End</u>**: El front se basará estrictamente en HTML y CSS a través de la utilización de plantillas que ofrece Django. Dichas plantillas se modularizarán de forma que cada componente (Véase el footer, header o el body) sean independientes y se puedan usar en cada una de las páginas de la web. Es posible la implementación de JavaScript.
 
   
 
-- <u>Back-End</u>: El back será desarrollado en su totalidad en Python con las herramientas de las que nos provee Django y alguna librería adicional para realizar las funciones de web scrapping, que es en lo que se basará el proyecto.
+- <u>**Back-End**</u>: El back será desarrollado en su totalidad en Python con las herramientas de las que nos provee Django y alguna librería adicional para realizar las funciones de web scrapping, que es en lo que se basará el proyecto.
 
   
 
@@ -136,23 +136,23 @@ Parte Importante del desarrollo son las **Templates**. Es una carpeta creada por
 
 Estas son las diferentes templates que he creado para el proyecto.
 
-**Index**:
+- **Index**:
 
 ![index](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/index.png)
 
-**Respuestas**:
+- **Respuestas**:
 
 ![respuestas](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/respuestas.png)
 
-**Header**:
+- **Header**:
 
 ![header](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/header.png)
 
-**Footer**:
+- **Footer**:
 
 ![footer](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/footer.png)
 
-**Form**:
+- **Form**:
 
 ![form](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/form.png)
 
