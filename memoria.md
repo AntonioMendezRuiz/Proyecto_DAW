@@ -144,7 +144,7 @@ Uno de los quebraderos de cabeza más grandes que he tenido durante el proyecto 
 
 No obstante detallaré alguno de ellos con los que más me he "peleado".
 
-	- Problemas con el código de la web "LaWebDelProgramador": Esta web es un poco "rebelde" dado que no solo es un foro sino que también contiene artículos cuyo formato es diferente al de una consulta. ¿El problema? que si solo nos centramos en las consultas, estas también tiene formatos distintos por algun criterio que no llego a entender. No he encontrado ningún patrón que me haga poder discernir entre los diferentes formatos de la web, cosa que hace muy dificil trabajar con ella. Pensé en cambiar de web dado que me estaba llevando mucho tiempo pero ya era demasiado tarde.
+- Problemas con el código de la web "LaWebDelProgramador": Esta web es un poco "rebelde" dado que no solo es un foro sino que también contiene artículos cuyo formato es diferente al de una consulta. ¿El problema? que si solo nos centramos en las consultas, estas también tiene formatos distintos por algun criterio que no llego a entender. No he encontrado ningún patrón que me haga poder discernir entre los diferentes formatos de la web, cosa que hace muy dificil trabajar con ella. Pensé en cambiar de web dado que me estaba llevando mucho tiempo pero ya era demasiado tarde.
 
  - Problemas con las views de Django: Este problema fue un quebradero de cabeza al principio y me llevo tiempo solucionar porque aún no entiendia muy bien como funcionaba Django. Basicamente no sabía como establecer las diferentes views y poder acceder a ellas sin tener un menú, es decir, cambiar de views al hacer una búsqueda.
 
