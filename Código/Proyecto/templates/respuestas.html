@@ -148,6 +148,12 @@
             height: 4rem;
             width: 7rem;
         }
+        .cabecera{
+            font-size: 2rem;
+            text-align: center;
+            color:white;
+            -webkit-text-stroke: 1px black;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
@@ -169,16 +175,16 @@
     <div class="respuestas" id="resultado">
         <div id="stack">
             <img class = 'logos' src="https://www.muycomputerpro.com/wp-content/uploads/2019/05/stack-overflow-brecha-seguridad.jpg">
-            <h2>Consulta</h2>
+            <h2 class= "cabecera consulta">Consulta</h2>
             <div id="preguntaStack">{{ preguntaStack|safe }}</div>
-            <h2>Respuesta</h2>
+            <h2 class= "cabecera respuesta">Respuesta</h2>
             <div id="respuestaStack">{{ respuestaStack|safe }}</div>
         </div>
         <div id="web">
             <img class = "logos" src="https://www.lawebdelprogramador.com/usr/43000/43585/profileImage_origin.jpg?1412661345" alt="">
-            <h2>Consulta</h2>
+            <h2 class= "cabecera consulta">Consulta</h2>
             <div id="preguntaWeb">{{ preguntaWeb|safe }}</div>
-            <h2>Respuesta</h2>
+            <h2 class= "cabecera respuesta">Respuesta</h2>
             <div id="respuestaWeb">{{ respuestaWeb|safe }}</div>
         </div>
     </div>
