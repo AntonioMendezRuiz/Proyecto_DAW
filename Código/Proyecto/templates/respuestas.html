@@ -156,6 +156,17 @@
         }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            var divs = $('.codeFormat').children().addClass("hijo");
+            var borradoHijo = $('.hijo').children().addClass("nieto");
+            var borradoNieto = $('.nieto').first().remove();
+
+            var usuario = $('.profileImage').parent().remove();
+        });
+    </script>
 
 </head>
 
