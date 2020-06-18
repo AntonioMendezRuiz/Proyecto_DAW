@@ -34,11 +34,11 @@ Para la arquitectura del proyecto usaremos Django con la ayuda de algunas librer
 
 En esta sección se describen los módulos que van a constituir el software a desarrollar. Debido a la naturaleza del proyecto, la estructura de dichos módulos puede cambiar, por lo que esto es un texto vivo. Además de su arquitectura, también debería especificarse el lenguaje de programación en el que están siendo desarrollados dichos módulos.
 
-- Front-End: El front se basará estrictamente en HTML y CSS a través de la utilización de plantillas que ofrece Django. Dichas plantillas se modularizarán de forma que cada componente (Véase el footer, header o el body) sean independientes y se puedan usar en cada una de las páginas de la web. Es posible la implementación de JavaScript.
+- <u>Front-End</u>: El front se basará estrictamente en HTML y CSS a través de la utilización de plantillas que ofrece Django. Dichas plantillas se modularizarán de forma que cada componente (Véase el footer, header o el body) sean independientes y se puedan usar en cada una de las páginas de la web. Es posible la implementación de JavaScript.
 
   
 
-- Back-End: El back será desarrollado en su totalidad en Python con las herramientas de las que nos provee Django y alguna librería adicional para realizar las funciones de web scrapping, que es en lo que se basará el proyecto.
+- <u>Back-End</u>: El back será desarrollado en su totalidad en Python con las herramientas de las que nos provee Django y alguna librería adicional para realizar las funciones de web scrapping, que es en lo que se basará el proyecto.
 
   
 
@@ -75,7 +75,7 @@ En este apartado detallaremos como ha sido el desarrollo de la aplicación y qu�
 
 ![Django_logo](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/Django_logo.png)
 
-Despues de la instalación de Django nos lanzamos a la creación del proyecto con el comando:
+Después de la instalación de Django nos lanzamos a la creación del proyecto con el comando:
 
 ```
 $ django-admin startproject CodePass
@@ -94,7 +94,7 @@ CodePass/
         wsgi.py
 ```
 
-y por último el comando que nos permitirá lanzar un servidor y observar nuestro trabajo:
+Por último, el comando que nos permitirá lanzar un servidor y observar nuestro trabajo:
 
 ```
 $ python manage.py runserver
