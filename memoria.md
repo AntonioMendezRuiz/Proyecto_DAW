@@ -75,5 +75,5 @@ El funcionamiento del software al realizar la consulta es el siguiente:
 
 En este apartado detallaremos como ha sido el desarrollo de la aplicación y qué hemos usado para la realización del mismo. Comenzaremos con Django y sus peculiaridades.
 
-
+![1_HVKOLLX7wprRbHTl2IPDcQ](C:\Users\mende\Desktop\Proyecto_DAW\img\1_HVKOLLX7wprRbHTl2IPDcQ.png)
 
