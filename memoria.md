@@ -115,3 +115,37 @@ El archivo **urls.py** detalla los diferentes paths de los que consta la aplicac
 El archivo **views.py** es el último que detallaremos y el mas importante pues es el que contiene la lógica del programa. En el se encuentran las vistas de las diferentes partes de la web. Vease la Main Page: 
 
 ![codigo_main](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/codigo_main.png)
+
+Y esta es la parte importante del programa, la view de consultas: 
+
+![codigo_consultas](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/codigo_consultas.png)
+
+Haremos un resumen de esta última sin ahondar en cada detalle del código para no extendernos demasiado. En primer lugar la cosulta realizada en el usuario desde el front viene recogida por la función de Python "request.get("identificador HTML")" y una vez la tenemos, empezamos a trabajar con ella.
+
+En primer lugar creamos la URL con la búsqueda del usuario. Aquí crearemos dos búsqueda, primero la de Google de la cual extraemos la URL de la web a la que queremos entrar y la asignamos a otra variable y usamos esta URL para entrar en la web deseada.
+
+Acto seguido traemos el código HTML el cual necesitamos para la extracción de información de manera adecuada. Esta parte es la mas compleja porque cada web tiene un formato distinto y hay queda adaptar el código para cada una de ellas.
+
+Una vez tenemos la información seleccionamos las etiquetas que nos interesan con la función de Python ".find("Etiqueta que queremos")"  la cual nos da una lista de las etiquetas encontradas que cumplan los requisitos que hemos impuesto.
+
+El siguiente paso que tomamos es la de formatear el código que nos puede traer la consulta, todo ello para que quede bien indentado y bonito. Aqui hacemos uso de una librería de JavaScript llamada "PrettyFy".
+
+Y por ultimo pasamos la respuesta del servidor al front. En caso de que no exisitiese dicha respuesta por parte de alguna de las webs, se mostraria un mensaje comunicandole al usuario que no existe dicha consulta.
+
+
+
+## 5. Problemas encontrados
+
+Los problemas encontrados no han sido pocos, desde problemas con windows a la hora de intentar portar el proyecto entre mis propios PCs, hasta problemas con las librerías externas por no entender muy bien su funcionamiento.
+
+El problema con windows es sencillo pero dificil de solucionar, o mas bien caro, dado que un windows que no tenga clave de verificacion, es decir, que no tenga licencia, no puede ejectuar maquinas virtuales y por tanto Django no funciona en él.
+
+Uno de los quebraderos de cabeza más grandes que he tenido durante el proyecto no ha sido otro que el formato de la respuesta que quiero mostrar al usuario. El por qué de esto es debido a que dependemos de información del exterior y esto hace que la cantidad de posibles combinaciones de formatos que podamos recibir sea inabarcable. He intentado cubrir el mayor número de ellas que he podido pero nada asegura que en futuras búsquedas pueda venir algo "feo" que no pueda tratar mi programa, por lo que uno de los siguentes pasos sería el testeo masivo de consultas y ver que tipo de excepciones podemos encontrar.
+
+No obstante detallaré alguno de ellos con los que más me he "peleado".
+
+	- Problemas con el código de la web "LaWebDelProgramador": Esta web es un poco "rebelde" dado que no solo es un foro sino que también contiene artículos cuyo formato es diferente al de una consulta. ¿El problema? que si solo nos centramos en las consultas, estas también tiene formatos distintos por algun criterio que no llego a entender. No he encontrado ningún patrón que me haga poder discernir entre los diferentes formatos de la web, cosa que hace muy dificil trabajar con ella. Pensé en cambiar de web dado que me estaba llevando mucho tiempo pero ya era demasiado tarde.
+
+ - Problemas con las views de Django: Este problema fue un quebradero de cabeza al principio y me llevo tiempo solucionar porque aún no entiendia muy bien como funcionaba Django. Basicamente no sabía como establecer las diferentes views y poder acceder a ellas sin tener un menú, es decir, cambiar de views al hacer una búsqueda.
+
+   
