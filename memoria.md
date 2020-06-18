@@ -75,5 +75,5 @@ El funcionamiento del software al realizar la consulta es el siguiente:
 
 En este apartado detallaremos como ha sido el desarrollo de la aplicación y qué hemos usado para la realización del mismo. Comenzaremos con Django y sus peculiaridades.
 
-![Django_logo](img\Django_logo.png)
+![Django_logo](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/Django_logo.png)
 
