@@ -193,7 +193,7 @@ Dentro del proyecto hay un archivo el cual se denomina "changelog" en el cual se
 
 A parte de los métodos convencionales de ayuda tales como StackOverFlow, GitHub, W3School,... la bibliografía usada es extensa e interesante.
 
-He adjuntado una carpeta al proyecto llamada "Bibliografía" la cual recopila los libros que me han servido para la realización del proyecto. Son los siguientes 
+He adjuntado una carpeta al proyecto llamada "Bibliografía" la cual recopila los libros que me han servido para la realización del proyecto. Son los siguientes:
 
 - *Aidas Bendoraitis, Jake Kronika - Django 3 Web Development Cookbook_ Actionable solutions to common problems in Python web development-Packt Publishing (2020*
 - *Daniel Roy Greenfield, Audrey Roy Greenfield - Django Crash Course (2020)*
