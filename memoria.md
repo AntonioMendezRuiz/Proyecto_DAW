@@ -73,7 +73,40 @@ El funcionamiento del software al realizar la consulta es el siguiente:
 
 ### Desarrollo
 
-En este apartado detallaremos como ha sido el desarrollo de la aplicación y qué hemos usado para la realización del mismo. Comenzaremos con Django y sus peculiaridades.
+En este apartado detallaremos como ha sido el desarrollo de la aplicación y qué hemos usado para la realización del mismo. Comenzaremos con Django y sus peculiaridades. Todo el desarrollo ha sido realizado en Linux, concretamente en ubuntu.
 
 ![Django_logo](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/Django_logo.png)
+
+Despues de la instalación de Django nos lanzamos a la creación del proyecto con el comando:
+
+```
+$ django-admin startproject CodePass
+```
+
+Lo que nos deja la siguiente estructura de carpetas:
+
+```
+CodePass/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        asgi.py
+        wsgi.py
+```
+
+y por último el comando que nos permitirá lanzar un servidor y observar nuestro trabajo:
+
+```
+$ python manage.py runserver
+```
+
+Este es nuestro punto de partida  en el desarrollo de la aplicación. Ahora entraremos en materia y veremos los diferentes achivos que entran en juego.
+
+El archivo **settings.py** es aquel que se encarga de configurar todos los paramentros de la aplicación, desde usuarios hasta rangos de IPs que tienen acceso cuando está en despliegue. Este archivo no lo tocaremos mucho durante el desarrollo ya que no ha sido necesario modificar ninguno de estos parametros debido a que la aplicación no ha sido desplegueada aún, así que pasaremos al siguiente.
+
+![settings](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/settings.png)
+
+El archivo **urls.py** detalla los diferentes paths de los que consta la aplicación, es decir, aquellas partes de la web donde puede acceder el usuario y cual es su url. Nuestra aplicación en este caso solo tiene un par paths, uno para la Main Page y otro para las consultas.
 
