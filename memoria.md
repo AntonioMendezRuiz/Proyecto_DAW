@@ -110,3 +110,8 @@ El archivo **settings.py** es aquel que se encarga de configurar todos los param
 
 El archivo **urls.py** detalla los diferentes paths de los que consta la aplicación, es decir, aquellas partes de la web donde puede acceder el usuario y cual es su url. Nuestra aplicación en este caso solo tiene un par paths, uno para la Main Page y otro para las consultas.
 
+![urls](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/urls.png)
+
+El archivo **views.py** es el último que detallaremos y el mas importante pues es el que contiene la lógica del programa. En el se encuentran las vistas de las diferentes partes de la web. Vease la Main Page: 
+
+![codigo_main](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/codigo_main.png)
