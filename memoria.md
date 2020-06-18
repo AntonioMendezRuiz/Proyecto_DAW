@@ -1,10 +1,10 @@
 # CodePass
 
-Realizado por: Antonio Méndez Ruiz
+**Realizado por**: Antonio Méndez Ruiz
 
-Tutor: Paco Ávila
+**Tutor**: Paco Ávila
 
-Curso: 2019/20
+**Curso**: 2019/20
 
 ## Índice
 
@@ -18,19 +18,19 @@ Curso: 2019/20
 
 
 
-## 1. Descripción del proyecto.
+## 1. Descripción del proyecto
 
 En el presente proyecto se pretende desarrollar una aplicación web que realice la función de un comparador. En este caso, el objeto de comparación serán las respuestas ofrecidas a una pregunta lanzada por un potencial usuario relacionada con programación. Dudas de dependencia, de errores en código, de cómo hacer o crear un programa que cumpla una determinada función, etc. Este proyecto pretende ser además el trabajo final de Antonio Méndez Ruiz, por lo que es posible que existan varias releases, en función del alcance de una y otra parte.
 
-## 2. Objetivos.
+## 2. Objetivos
 
 El objetivo principal del software es crear un comparador de búsquedas sobre programación el cual facilite la labor del programador a la hora de realizar sus consultas. La intención es que dichas búsquedas aparezcan de una forma ordenada y clara en pantalla para que el usuario, de un solo vistazo, pueda ver cual se ajusta más a su duda y por tanto resolverla.
 
-## 3. Arquitectura.
+## 3. Arquitectura
 
 Para la arquitectura del proyecto usaremos Django con la ayuda de algunas librerías de JavaScript como "Prettyfy" el cual sirve para el formateo de códigos en la web.
 
-### Módulos.
+### Módulos
 
 En esta sección se describen los módulos que van a constituir el software a desarrollar. Debido a la naturaleza del proyecto, la estructura de dichos módulos puede cambiar, por lo que esto es un texto vivo. Además de su arquitectura, también debería especificarse el lenguaje de programación en el que están siendo desarrollados dichos módulos.
 
