@@ -126,9 +126,9 @@ Acto seguido traemos el código HTML el cual necesitamos para la extracción de 
 
 Una vez tenemos la información seleccionamos las etiquetas que nos interesan con la función de Python ".find("Etiqueta que queremos")"  la cual nos da una lista de las etiquetas encontradas que cumplan los requisitos que hemos impuesto.
 
-El siguiente paso que tomamos es la de formatear el código que nos puede traer la consulta, todo ello para que quede bien indentado y bonito. Aqui hacemos uso de una librería de JavaScript llamada "PrettyFy".
+El siguiente paso que tomamos es la de formatear el código que nos puede traer la consulta, todo ello para que quede bien indentado y bonito. Aquí hacemos uso de una librería de JavaScript llamada "PrettyFy".
 
-Y por ultimo pasamos la respuesta del servidor al front. En caso de que no exisitiese dicha respuesta por parte de alguna de las webs, se mostraria un mensaje comunicandole al usuario que no existe dicha consulta.
+Y por último pasamos la respuesta del servidor al front. En caso de que no exisitiese dicha respuesta por parte de alguna de las webs, se mostraria un mensaje comunicandole al usuario que no existe dicha consulta.
 
 Parte Importante del desarrollo son las **Templates**. Es una carpeta creada por el desarrollador dentro de Django que te permite establecer plantillas para modularizar el código HTML de la web.
 
@@ -178,7 +178,7 @@ Este apartado es un poco subjetivo pero hay algunas mejoras que están claras y 
 
 Tenia planeado, de haber tenido más tiempo o no haber estado en las prácticas, haber implementado algunas cosas más como:
 
-- Realizar un loco acorde con la temática de la web.
+- Realizar un logo acorde con la temática de la web.
 - Haber introducido una o dos webs más donde realizar las búsquedas. El problema de este apartado no es otro que eso hubiera multiplicado el trabajo x4 al tener que hacer todo lo que he detallado al menos dos veces más en el mejor de los casos y sin contar con complicaciones derivadas de estas webs.
 - Enlaces directos a las webs donde están las consultas. Esto, básicamente, ha sido por falta de tiempo.
 - Bot de twitter. Estuve un par de días mirando como hacer un bot te twitter el cual cuando se realizara una búsqueda la twitteara. Lo dejé para el final y por falta de tiempo no se ha podido hacer.
