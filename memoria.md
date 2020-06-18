@@ -173,3 +173,35 @@ No obstante detallaré alguno de ellos con los que más me he "peleado".
  - Problemas con las views de Django: Este problema fue un quebradero de cabeza al principio y me llevo tiempo solucionar porque aún no entiendia muy bien como funcionaba Django. Basicamente no sabía como establecer las diferentes views y poder acceder a ellas sin tener un menú, es decir, cambiar de views al hacer una búsqueda.
 
    
+
+## 6.Posibles mejoras y siguientes pasos
+
+Este apartado es un poco subjetivo pero hay algunas mejoras que están claras y que atañen al funcionamiento directo de la aplicación. La principal de ellas es continuar con el testeo y descubrir todos los posibles formatos de páginas que puede llegar y controlarlos todos. Esto más que dificil es laborioso y largo.
+
+Tenia planeado, de haber tenido más tiempo o no haber estado en las prácticas, haber implementado algunas cosas más como:
+
+- Realizar un loco acorde con la temática de la web.
+- Haber introducido una o dos webs más donde realizar las búsquedas. El problema de este apartado no es otro que eso hubiera multiplicado el trabajo x4 al tener que hacer todo lo que he detallado al menos dos veces más en el mejor de los casos y sin contar con complicaciones derivadas de estas webs.
+- Enlaces directos a las webs donde están las consultas. Esto, básicamente, ha sido por falta de tiempo.
+- Bot de twitter. Estuve un par de días mirando como hacer un bot te twitter el cual cuando se realizara una búsqueda la twitteara. Lo dejé para el final y por falta de tiempo no se ha podido hacer.
+
+Todo esto anterior se pueden considerar próximos pasos para las releases y además se aceptan sugerencias.
+
+Dentro del proyecto hay un archivo el cual se denomina "changelog" en el cual se detallan las releases que hemos tenido hasta fecha de hoy y los posibles cambios venideros.
+
+![changelog](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/changelog.png)
+
+## 7. Bibliografía
+
+A parte de los métodos convencionales de ayuda tales como StackOverFlow, GitHub, W3School,... la bibliografía usada es extensa e interesante.
+
+He adjuntado una carpeta al proyecto llamada "Bibliografía" la cual recopila los libros que me han servido para la realización del proyecto. Son los siguentes 
+
+- ## **Aidas Bendoraitis, Jake Kronika - Django 3 Web Development Cookbook_ Actionable solutions to common problems in Python web development-Packt Publishing (2020**
+
+- ## **Daniel Roy Greenfield, Audrey Roy Greenfield - Django Crash Course (2020)**
+
+- ## **La guía definitiva de Django**
+
+- ## **Ryan Mitchell - Web Scraping with Python_ Collecting Data from the Modern Web-O'Reilly Media (2015)**
+
