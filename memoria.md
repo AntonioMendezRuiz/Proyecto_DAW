@@ -6,6 +6,8 @@
 
 **Curso**: 2019/20
 
+![home](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/home.jpeg)
+
 ## Índice
 
 1. Descripción e introducción
@@ -15,8 +17,6 @@
 5. Problemas encontrados
 6. Posibles mejoras y próximos pasos
 7. Bibliografía
-
-
 
 ## 1. Descripción del proyecto
 
@@ -128,7 +128,13 @@ Una vez tenemos la información seleccionamos las etiquetas que nos interesan co
 
 El siguiente paso que tomamos es la de formatear el código que nos puede traer la consulta, todo ello para que quede bien indentado y bonito. Aquí hacemos uso de una librería de JavaScript llamada "PrettyFy".
 
+![ambas_consultas](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/ambas_consultas.jpeg)
+
 Y por último pasamos la respuesta del servidor al front. En caso de que no exisitiese dicha respuesta por parte de alguna de las webs, se mostraria un mensaje comunicandole al usuario que no existe dicha consulta.
+
+![sin_respuesta](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/sin_respuesta.jpeg)
+
+![consulta_parcial](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/consulta_parcial.jpeg)
 
 Parte Importante del desarrollo son las **Templates**. Es una carpeta creada por el desarrollador dentro de Django que te permite establecer plantillas para modularizar el código HTML de la web.
 
