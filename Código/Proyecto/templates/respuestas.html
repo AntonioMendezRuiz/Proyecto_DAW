@@ -119,6 +119,7 @@
             border-top: white 3px;
             margin: 0%;
             margin: 0px;
+            margin-top: 5rem;
             bottom: 0px;
         }
 
@@ -133,8 +134,8 @@
             color: #7b869c;
         }
         img{
-            height: 50%;
-            width: 50%;
+            height: 60%;
+            width: 70%;
         }
       
         .informacion,
@@ -145,8 +146,19 @@
             margin-bottom: 5rem;
         }
         .logos{
-            height: 4rem;
+            height: 4.5rem;
             width: 7rem;
+            border:2px solid black;
+        }
+        .prettyprint, .nieto{
+            display: inline-block;
+            width: 100% !important;
+            overflow: auto;
+            border: 1px solid black;
+        }
+            
+        form{
+            margin-bottom: 4rem;
         }
         .cabecera{
             font-size: 2rem;
@@ -163,8 +175,18 @@
             var divs = $('.codeFormat').children().addClass("hijo");
             var borradoHijo = $('.hijo').children().addClass("nieto");
             var borradoNieto = $('.nieto').first().remove();
+            var añadeClase = $('.nieto').addClass("prettyprint prettyprinted");
 
             var usuario = $('.profileImage').parent().remove();
+
+            var respuestas = $('.forosVotar').parent().remove();
+            var metadata = $('.f_grey').remove();
+            if($('#respuestaWeb').html()==""){
+                $('.cabeceraRespuestaWeb').remove();
+            }
+            if($('#respuestaStack').html()==""){
+                $('.cabeceraRespuestaStack').remove();
+            }
         });
     </script>
 
@@ -186,16 +208,16 @@
     <div class="respuestas" id="resultado">
         <div id="stack">
             <img class = 'logos' src="https://www.muycomputerpro.com/wp-content/uploads/2019/05/stack-overflow-brecha-seguridad.jpg">
-            <h2 class= "cabecera consulta">Consulta</h2>
+            <h2 class= "cabeceraConsultaStack">Consulta</h2>
             <div id="preguntaStack">{{ preguntaStack|safe }}</div>
-            <h2 class= "cabecera respuesta">Respuesta</h2>
+            <h2 class= "cabeceraRespuestaStack">Respuesta</h2>
             <div id="respuestaStack">{{ respuestaStack|safe }}</div>
         </div>
         <div id="web">
             <img class = "logos" src="https://www.lawebdelprogramador.com/usr/43000/43585/profileImage_origin.jpg?1412661345" alt="">
-            <h2 class= "cabecera consulta">Consulta</h2>
+            <h2 class= "cabeceraConsultaWeb">Consulta</h2>
             <div id="preguntaWeb">{{ preguntaWeb|safe }}</div>
-            <h2 class= "cabecera respuesta">Respuesta</h2>
+            <h2 class= "cabeceraRespuestaWeb">Respuesta</h2>
             <div id="respuestaWeb">{{ respuestaWeb|safe }}</div>
         </div>
     </div>

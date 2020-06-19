@@ -58,6 +58,7 @@ def consulta(request):
         preguntaStack = 'La consulta no es lo suficientemente precisa o no existe.'
         respuestaStack = ''
 
+
     try:
         #Preparamos la query para introducirla en el buscador
         busqueda = request.GET.get('busca')
