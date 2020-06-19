@@ -31,6 +31,12 @@
 - Cambios en el layout.
 - Mejoramos la limpiza y simplicidad del código.
 
+## v0.5.0
+- Solucionados la mayoría de bugs relacionados con la web del programador (test in progress).
+- Mejoras en el front.
+- Control de excepciones en el back antes no contempladas.
+- Mejora visual del código.
+
 ## Roadmap
 
 - Establecer Favicon y logo de la web.
