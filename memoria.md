@@ -62,12 +62,12 @@ La funcionalidad del proyecto es bastante sencilla. Básicamente se trata de un 
 
 El funcionamiento del software al realizar la consulta es el siguiente:
 
-	- Usuario introduce en el campo de texto de la Main Page la consulta que quiere obtener.
-	- La aplicación utiliza el motor de búsqueda de Google para encontrar la consulta, lo que hace que se ajuste el idioma de la consulta de manera automática.
-	- Accedemos a las webs y extraemos los datos (Detallaremos esto más adelante).
-	- Tratamos los datos en el back y los formateamos para enviarlos al front.
-	- Mostramos los datos al usuario.
-	- El usuario puede volver a la Main Page o realizar otra consulta desde esta misma ventana.
+- Usuario introduce en el campo de texto de la Main Page la consulta que quiere obtener.
+- La aplicación utiliza el motor de búsqueda de Google para encontrar la consulta, lo que hace que se ajuste el idioma de la consulta de manera automática.
+- Accedemos a las webs y extraemos los datos (Detallaremos esto más adelante).
+- Tratamos los datos en el back y los formateamos para enviarlos al front.
+- Mostramos los datos al usuario.
+- El usuario puede volver a la Main Page o realizar otra consulta desde esta misma ventana.
 
 ### Desarrollo
 
