@@ -6,7 +6,7 @@
 
 **Curso**: 2019/20
 
-![home](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/home.jpeg)
+![home](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/home.jpg)
 
 ## Índice
 
@@ -128,13 +128,13 @@ Una vez tenemos la información seleccionamos las etiquetas que nos interesan co
 
 El siguiente paso que tomamos es la de formatear el código que nos puede traer la consulta, todo ello para que quede bien indentado y bonito. Aquí hacemos uso de una librería de JavaScript llamada "PrettyFy".
 
-![ambas_consultas](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/ambas_consultas.jpeg)
+![ambas_consultas](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/ambas_consultas.jpg)
 
 Y por último pasamos la respuesta del servidor al front. En caso de que no exisitiese dicha respuesta por parte de alguna de las webs, se mostraria un mensaje comunicandole al usuario que no existe dicha consulta.
 
-![sin_respuesta](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/sin_respuesta.jpeg)
+![sin_respuesta](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/sin_respuesta.jpg)
 
-![consulta_parcial](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/consulta_parcial.jpeg)
+![consulta_parcial](https://github.com/AntonioMendezRuiz/Proyecto_DAW/blob/master/img/consulta_parcial.jpg)
 
 Parte Importante del desarrollo son las **Templates**. Es una carpeta creada por el desarrollador dentro de Django que te permite establecer plantillas para modularizar el código HTML de la web.
 
